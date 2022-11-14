@@ -1,0 +1,30 @@
+# DDL
+
+-- Create
+# CRIAR O BANCO DE DADOS E TABELAS
+
+CREATE DATABASE ddl;
+
+# SE NAO COLOCAR O USE ...., O BD CRIARÁ TABELAS A PARTIR DO BANCO DE DADOS SELECIONADO NO MOMENTO
+USE ddl;
+
+CREATE TABLE pessoas (
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
+);
+
+INSERT INTO pessoas(nome) VALUES ('Matheus Sobreira');
+
+-- Alter
+# ALTERA BANCO DE DADOS OU TABELAS
+ALTER TABLE pessoas ADD ano_nascimento INT;
+ALTER TABLE pessoas ADD mes_nascimento INT NOT NULL;
+
+UPDATE pessoas set mes_nascimento = 2 WHERE id = 1;
+
+-- Drop
+# DELETANDO TABELAS E BANCO DE DADOS
+DROP TABLE produtos;
+DROP DATABASE secao03;
+
+SELECT * FROM pessoas;
